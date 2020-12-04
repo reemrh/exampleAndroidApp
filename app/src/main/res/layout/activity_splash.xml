@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:src="@mipmap/icon_foreground" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Things ToDo"
+        android:textSize="35sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="enter your email"
+        android:paddingLeft="15dp"
+        android:layout_marginHorizontal="25dp"
+        android:drawablePadding="20dp"/>
+        //android:drawableLeft="@mipmap/check" //
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="50dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="16sp"/>
+
+       <LinearLayout android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="#eee"
+           android:orientation="horizontal"
+           android:layout_marginHorizontal="30dp"
+         >
+
+           <TextView
+               android:id="@+id/text3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:text="Home" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="25tasks"
+               android:layout_gravity="center"
+               android:layout_marginLeft="240dp"
+               />
+
+       </LinearLayout>
+
+
+</LinearLayout>

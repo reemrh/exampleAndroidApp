@@ -1,0 +1,27 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:textSize="25sp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/yourEmail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Email"
+        android:textSize="28sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"/>
+
+
+
+
+
+</LinearLayout>

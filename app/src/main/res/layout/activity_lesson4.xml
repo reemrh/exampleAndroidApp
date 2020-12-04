@@ -1,0 +1,39 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Your Email"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="200dp"/>
+
+    <Button
+        android:id="@+id/showContent3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="show content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/nextBtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="next"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"/>
+
+
+
+</LinearLayout>
