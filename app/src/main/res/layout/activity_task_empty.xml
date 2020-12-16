@@ -1,0 +1,21 @@
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginHorizontal="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+ <CheckBox android:id="@+id/checkbox_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="task title or content "/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="1" />
+    <TextView
+        android:id="@+id/checkboxValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home" />
+</LinearLayout>
