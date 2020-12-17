@@ -2,12 +2,12 @@ package com.example.exampleapp;
 
 public class TaskItem {
     String Title;
-    String isChecked;
+    Boolean isChecked;
 
     public TaskItem() {
     }
 
-    public TaskItem(String title, String isChecked) {
+    public TaskItem(String title, Boolean isChecked) {
         Title = title;
         this.isChecked = isChecked;
     }
@@ -20,11 +20,11 @@ public class TaskItem {
         Title = title;
     }
 
-    public String getIsChecked() {
+    public Boolean getIsChecked() {
         return isChecked;
     }
 
-    public void setIsChecked(String isChecked) {
+    public void setIsChecked(Boolean isChecked) {
         this.isChecked = isChecked;
     }
 }

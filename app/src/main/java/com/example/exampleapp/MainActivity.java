@@ -14,17 +14,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     TextView back,yourEmail;
     String emailFromIntent;
-
     RecyclerView tasks_rv;
     TaskAdapterEx taskAdapter;
     static List<TaskItem> tasksList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        tasksList.add(new TaskItem("Study Programming","false"));
-        tasksList.add(new TaskItem("Study","false"));
-        tasksList.add(new TaskItem("Programming","true"));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         back = findViewById(R.id.back);
@@ -36,10 +31,15 @@ public class MainActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
                 finish();
             }
         });
+
+// add task items to the list
+        tasksList.add(new TaskItem("Study Programming",false));
+        tasksList.add(new TaskItem("Study",true));
+        tasksList.add(new TaskItem("Programming",true));
+
 
         tasks_rv = findViewById(R.id.tasks_rv);
         tasks_rv.setLayoutManager(new LinearLayoutManager(this));
