@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/signtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Sign in"
+            android:textSize="16sp"    />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/closebtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let’s complete  creation \n of your ListToDo account"
+        android:textSize="24sp"
+        android:textColor="#1A1824"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:id="@+id/emailet1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email address"
+        android:layout_marginTop="50dp"/>
+    <EditText
+        android:id="@+id/passet1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Password"
+        android:layout_marginTop="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <TextView
+
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="By signing up you accept the Terms of service and Privacy Policy."
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"/>
+    <Button
+        android:id="@+id/signupbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="#7B1E58"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="16sp"/>
+
+
+</LinearLayout>

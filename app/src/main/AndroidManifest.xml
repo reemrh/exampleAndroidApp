@@ -9,23 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExampleApp">
-        <activity android:name=".checkbox">
-
+        <activity android:name=".login"></activity>
+        <activity android:name=".Signup">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".taskEmpty"></activity>
+        <activity android:name=".checkbox" />
+        <activity android:name=".taskEmpty" />
         <activity android:name=".otherActivity" />
-        <activity android:name=".lesson4"></activity>
+        <activity android:name=".lesson4" />
         <activity android:name=".splash2" />
         <activity android:name=".lesson3" />
         <activity android:name=".lesson2" />
         <activity android:name=".splash" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
