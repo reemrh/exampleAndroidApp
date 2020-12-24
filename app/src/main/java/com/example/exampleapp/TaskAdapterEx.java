@@ -8,9 +8,14 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -18,6 +23,7 @@ import java.util.List;
 
         Context context;
         List<TaskItem> tasks;
+        FirebaseAuth mAuth;
 
         public TaskAdapterEx(Context context, List<TaskItem> tasks) {
             this.context = context;
@@ -31,13 +37,13 @@ import java.util.List;
 
         class TaskVh extends RecyclerView.ViewHolder {
 
-            TextView listType;
+            TextView delete;
             CheckBox checkBox;
 
             public TaskVh(@NonNull View itemView) {
                 super(itemView);
                 checkBox = itemView.findViewById(R.id.checkbox_example);
-                listType = itemView.findViewById(R.id.checkboxValue);
+                delete = itemView.findViewById(R.id.delete);
             }
 
             public void setData(final TaskItem task) {
@@ -56,13 +62,25 @@ import java.util.List;
         public void onBindViewHolder(@NonNull TaskVh holder, int position) {
             holder.setData(tasks.get(position));
             TaskItem taskEntity = tasks.get(position);
-           if(taskEntity.getIsChecked()){
+           if(taskEntity.getIsChecked() == true){
                holder.checkBox.setChecked(true);
                holder.checkBox.setPaintFlags( holder.checkBox.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
            }
             holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                    mAuth = FirebaseAuth.getInstance();
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    String uid = user.getUid();
+
+
+                    TaskItem newTask= new TaskItem();
+                    newTask.setTitle(taskEntity.getTitle());
+                    newTask.setIsChecked(isChecked);
+                    newTask.setId(taskEntity.id);
+                    FirebaseDatabase.getInstance().getReference("Users").child(uid).child("tasks").child(taskEntity.getId()).setValue(newTask);
+
                     taskEntity.setIsChecked(isChecked);
                     holder.checkBox.setSelected(isChecked);
                     if(isChecked){
@@ -75,6 +93,17 @@ import java.util.List;
 
                 }
             });
+
+           holder.delete.setOnClickListener(new View.OnClickListener(){
+               @Override
+               public void onClick(View v) {
+                   mAuth = FirebaseAuth.getInstance();
+                   FirebaseUser user = mAuth.getCurrentUser();
+                   String uid = user.getUid();
+                   FirebaseDatabase.getInstance().getReference("Users").child(uid).child("tasks").child(taskEntity.getId()).removeValue();
+               }
+
+           });
         }
 
 
